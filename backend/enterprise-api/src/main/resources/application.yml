@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: ${DATABASE_URL:jdbc:h2:mem:enterpriseflow;MODE=PostgreSQL;DB_CLOSE_DELAY=-1}
+    username: ${DATABASE_USERNAME:sa}
+    password: ${DATABASE_PASSWORD:}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: ${FLYWAY_ENABLED:true}
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+enterpriseflow:
+  storage: ${STORAGE_DIR:./storage}
+  hrms-url: ${HRMS_URL:http://localhost:5174}
+  hrms-username: ${HRMS_USERNAME:admin}
+  hrms-password: ${HRMS_PASSWORD:Admin@123}

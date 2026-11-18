@@ -1,0 +1,13 @@
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background: #f3f5f8;
+}
+
+body {
+  min-height: 100vh;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="144" viewBox="0 0 720 144" role="img" aria-labelledby="title description">
+  <title id="title">EnterpriseFlow</title>
+  <desc id="description">Shield and checkmark logo for the EnterpriseFlow quality engineering workspace.</desc>
+  <defs>
+    <linearGradient id="mark" x1="20" y1="18" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#35D0A1"/>
+      <stop offset="1" stop-color="#07866C"/>
+    </linearGradient>
+    <linearGradient id="wordmark" x1="150" y1="35" x2="540" y2="106" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#142238"/>
+      <stop offset="1" stop-color="#28506A"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="128" height="128" rx="34" fill="#142238"/>
+  <path d="M72 25 108 39v29c0 25-15 42-36 53C51 110 36 93 36 68V39l36-14Z" fill="url(#mark)"/>
+  <path d="m54 69 12 12 25-28" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+  <text x="164" y="77" fill="url(#wordmark)" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="750" letter-spacing="-1.8">EnterpriseFlow</text>
+  <text x="168" y="109" fill="#07866C" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="3.2">QUALITY ENGINEERING  /  TEST AUTOMATION</text>
+</svg>

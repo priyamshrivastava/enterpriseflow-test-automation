@@ -1,0 +1,25 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: enterpriseflow
+      POSTGRES_USER: enterpriseflow
+      POSTGRES_PASSWORD: enterpriseflow
+    ports: ["5432:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+  backend:
+    build: ./backend/enterprise-api
+    environment:
+      DATABASE_URL: jdbc:postgresql://postgres:5432/enterpriseflow
+      DATABASE_USERNAME: enterpriseflow
+      DATABASE_PASSWORD: enterpriseflow
+    ports: ["8080:8080"]
+    depends_on: [postgres]
+  dashboard:
+    build: ./frontend/dashboard
+    ports: ["5173:80"]
+  hrms:
+    build: ./frontend/sample-hrms
+    ports: ["5174:80"]
+volumes:
+  pgdata:

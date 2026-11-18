@@ -1,0 +1,14 @@
+name: EnterpriseFlow CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: '21' }
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - run: mvn -f backend/enterprise-api/pom.xml test
+      - run: npm ci --prefix frontend/dashboard && npm run build --prefix frontend/dashboard
+      - run: npm ci --prefix frontend/sample-hrms && npm run build --prefix frontend/sample-hrms
